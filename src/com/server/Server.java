@@ -45,7 +45,9 @@ public class Server implements ActionListener, ServerImplCallBack {
 	public void actionPerformed(ActionEvent evt) {
 		String entered = evt.getActionCommand();
 		String deliveredMessage = "Server >> " + entered;
-		
+
+		chatInput.setText("");
+
 		sImpl.sendToAll(deliveredMessage);
 		append(deliveredMessage);
 	}
