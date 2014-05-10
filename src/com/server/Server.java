@@ -43,12 +43,14 @@ public class Server implements ActionListener, ServerImplCallBack {
 
 	@Override
 	public void actionPerformed(ActionEvent evt) {
+		
 		String entered = evt.getActionCommand();
-		String deliveredMessage = "Server >> " + entered;
-
 		chatInput.setText("");
-
+		
+		String deliveredMessage = "Server >> " + entered;
+		
 		sImpl.sendToAll(deliveredMessage);
+		
 		append(deliveredMessage);
 	}
 
